@@ -1,0 +1,278 @@
+Ejercicio 1
+int SumScores (int[]scores)
+{
+  +1 por asignacion (=)
+  int sum = 0;
+
++1 init + (N+1) comparaciones + N por incremento
+  for (int i= 0 ; i < scores.length; i++)
+  {
+    +2 por incremento y asignamiento + N indice
+    sum += scores[i]
+  }
+  +1
+  return sum;
+}
+
+1 + 1 + (n+1) + n + 2  + N+ 1 
+T(N)=3n + 6
+O(N) = N
+
+
+
+
+
+
+
+
+
+Ejercicio 2
+void ComparePlayer(List<GameObject> players)
+{
+      1+ por asignamiento + (N+1) comparaciones + N por incremento
+  for (int i = 0 ; i < players.Count; i++)
+  {
+      + 1 + N indice + 1 por asignamiento + (N + 1) comparaciones + N por incremento
+    for(int j = i + 1; i < players.Count; j++)
+    {
+      +1 print + N indice +1 por incremento + 1 por incremento
+      Debug.Log(player[i].name + "vs" + _____________);
+    } 
+  }
+}
+
+for interno
++ 1 + N indice + 1 por asignamiento + (N + 1) comparaciones + N por incremento
+for(int j = i + 1; i < players.Count; j++) = 3N + 3
+
+1 + N  + 1 + N +1 + N + 
+
+implementacion del for interno
+1 + N + 1 +1
+
+Total del For interno
+1 + N  + 1 + N +1 + N + 1 + N + 1 +1
+(4N + 6)*N
+4N'2 + 6N
+
+For externo
+    1+ por asignamiento + (N+1) comparaciones + N por incremento
+  for (int i = 0 ; i < players.Count; i++)
+
+1 +  N + 1 + N
+
+4N'2 + 6N + 1 + N + 1 + N
+4N + 8N + 2
+
+T(N) = 4n'2 + 8n + 2
+O(N) = N'2
+
+
+
+
+
+
+
+
+Ejercicio 3
+int CalculateInteractionScore(int[] players)
+{
+  +1 por asignamiento
+  int score = 0;
+      +1 incremento + (N+1)comparacion + N incremento
+  for (int i = 0; i< players.Length; i++)
+  {
+    +1 por asignamiento + (N+1) comparacion + N
+    for(int j = i +1; j<players.Length; j++)
+    {
+      +1 por asignamiento + N + 1 por incremento + N
+      int interaction = players[i + players[j];
+      +2 incremento y asignamiento
+      score +=interaction;
+    }
+  }  
+}
+
+For interno
++1 por asignamiento + N indice + 1 incremento + (N+1) comparacion + N
+    for(int j = i +1; j<players.Length; j++)
+1 + N + 1 + N + 1 + N
+3N + 3
+
+implementacion del for interno
++1 por asignamiento + N + 1 por incremento + N
+      int interaction = players[i + players[j];
+
+      +2 incremento y asignamiento
+      score +=interaction;
+1 + N + 1 + N + 2
+2N + 4
+
+Total del for interno
+3N + 2N + 4 + 3
+(5N + 7)*N
+5N'2 + 7N
+
+for externo
++1 incremento + (N+1)comparacion + N incremento
+  for (int i = 0; i< players.Length; i++)
+
+1 + N + 1 + N
+2N + 2
+
+1 + 5N'2 + 7N + 2N + 2
+5N'2 + 9N + 3
+
+T(N) =5n'2 + 9n + 3
+O(N) = N'2
+
+
+
+
+
+
+
+
+
+Ejercicio 4
+
+int CalculateFinalDamage(int attack , int defense , float multiplier)
+{
+  +1 asignamiento + 1 disminucion
+  int baseDamage = attack - defense;
+  +1 asignamiento + 1 multiplicacion
+  int finalDamage = (int)(baseDamage * multiplier);
+  +1 comparacion
+  if(finalDamage<0)
+  {
+  +1 asignamiento
+    finalDamage = 0;
+  }
+  +1
+  return finalDamage;
+}
+1 + 1 + 1 +1 +1 +1 +1
+T(N) = 7
+O(N) = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 5
+bool CanCastSpell(int mana , int cost)
+{
+  +1 asignamiento + 1 disminuye
+  int remainingMana = mana - cost;
+  +2 comparacion y asignamiento
+  if(remainingMana >= 0)
+  {
+    +1 print
+    Debug.Log("Spell casted");
+    +1 
+    return true;
+  }
+  +1
+  return false;
+}
+
+1 + 1 + 2 + 1 + 1 + 1
+T(N) = 7
+O(N) = 1
+
+
+
+
+
+
+
+Ejercicio 6
+Bool HasLowHealthPlayer(int[] healhValues)
+{
+  +1 signamiento + (N+1) comparacion + N incremento
+  for(int i = 0 ; i <healthValues.Length; i ++1)
+  {
+    +1 asignamiento + N indice
+    int health = healthValues.Length[i];
+    +1 comparacion
+    if(health < 30)
+    {
+      +1 print
+      Debug.Log(Debug.Log("Low health detected")
+      +1
+      return true;
+    }
+      +1
+    return false;
+  }
+}
+1+ n + 1 + 1 + 1 +n +1 +1 +1 +1
+
+1 + (N+1) + N + 1  + N + 1 + 1 + 1 + 1
+T(N)=3N + 7
+O(N)= N
+
+
+
+Ejercicio 7
+int CountStrogerPairs(int[] powerLevels)
+{
+  +1 asignamiento
+  int count = 0;
+  +1 asignamiento + (N+1) comparacion + N incremento
+  for(int i = 0; i< powerLevels.Length; i++)
+  {
+    +1 asignamiento + (N+1) comparacion + N incremento
+    for(int j = 0; j< powerLevels.Length;j++)
+    {
+      +N indice + 1 comparacion + N indice
+      if(powerLevels[i] > powerLevels[j])
+      {
+        +1 por ejecucion -> +N por cada ejecucion completa del for interno
+        count++;
+      }
+    }
+  }
+}
+for interno
++1 asignamiento + (N+1) comparacion + N incremento
+    for(int j = 0; j< powerLevels.Length;j++)
+2N + 2
+
+Implementacion del for interno
++N indice + 1 comparacion + N indice
+      if(powerLevels[i] > powerLevels[j])
+      {
+        +1 por ejecucion -> +N por cada ejecucion completa del for interno
+        count++;
+      }
+
+N + 1 + N + 1 + N
+3N + 2
+
+Total del for interno
+(5N + 4)N
+5N'2 + 4N
+
+For externo
++1 asignamiento + (N+1) comparacion + N incremento
+  for(int i = 0; i< powerLevels.Length; i++)
+1 + N + 1 + N
+2N + 2
+
+
+5N'2 + 4N + 2N + 2
+5N'2 + 6N + 2
+
+
+T(N) = 5N'2 + 6N + 2
+O(N) = N'2
