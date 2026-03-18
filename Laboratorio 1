@@ -256,12 +256,12 @@ Implementacion del for interno
         count++;
       }
 
-N + 1 + N + 1 + N
-3N + 2
+N + 1 + N  + N
+3N + 1
 
 Total del for interno
-(5N + 4)N
-5N'2 + 4N
+(5N + 3)N
+5N'2 + 3N
 
 For externo
 +1 asignamiento + (N+1) comparacion + N incremento
@@ -270,9 +270,9 @@ For externo
 2N + 2
 
 
-5N'2 + 4N + 2N + 2
-5N'2 + 6N + 2
+5N'2 + 3N + 2N + 2
+5N'2 + 5N + 2
 
 
-T(N) = 5N'2 + 6N + 2
+T(N) = 5N'2 + 5N + 2
 O(N) = N'2
